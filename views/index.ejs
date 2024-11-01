@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Cuaca Geo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <h1>Geo Weather API</h1>
+    
+    <div class="weather-info">
+        <h3><%= location%>, <%= countryCode %></h3> 
+        <h1><%= weatherIcon %></h1>
+        <p><%= temperature %>°C</p>
+    </div>
+    
+    
+    
+    <br><br><br>
+
+    <form action="/weather" method="POST">
+        <label for="location">Masukkan Kota atau Lokasi:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="submit">Cek Cuaca</button>
+    </form>
+
+    <br>
+
+    <% if (status) { %>
+        <p><%= status %></p>
+    <% } %>
+
+    
+
+    
+</body>
+</html>
