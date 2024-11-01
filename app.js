@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('index', { temperature: null, location: null, error: null, status: null, weatherIcon: null });
+    res.render('index', { temperature: null, location: null, error: null, status: null, weatherIcon: null , countryCode: null});
 });
 
 app.post('/weather', async (req, res) => {
